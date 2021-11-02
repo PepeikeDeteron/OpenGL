@@ -80,6 +80,7 @@ void display(void) {
   // 2つ目の図形を描画
   glPushMatrix();
   glTranslated(1.0, 1.0, 1.0);
+  glRotated((double)(2 * r), 0.0, 1.0, 0.0);
   cube();
 
   // モデルビュー変換行列の復帰
