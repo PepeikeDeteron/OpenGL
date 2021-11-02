@@ -36,6 +36,7 @@ GLfloat light1pos[] = { 5.0, 3.0, 0.0, 1.0 };
 
 GLfloat green[] = { 0.0, 1.0, 0.0, 1.0 };
 GLfloat red[] = { 0.8, 0.2, 0.2, 1.0 };
+GLfloat blue[] = { 0.2, 0.2, 0.8, 1.0 };
 
 void cube(void) {
   glBegin(GL_QUADS);
@@ -81,6 +82,7 @@ void display(void) {
   glPushMatrix();
   glTranslated(1.0, 1.0, 1.0);
   glRotated((double)(2 * r), 0.0, 1.0, 0.0);
+  glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, blue);
   cube();
 
   // モデルビュー変換行列の復帰
