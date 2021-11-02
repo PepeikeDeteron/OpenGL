@@ -77,6 +77,11 @@ void display(void) {
   // 図形の描画
   cube();
 
+  // 2つ目の図形を描画
+  glPushMatrix();
+  glTranslated(1.0, 1.0, 1.0);
+  cube();
+
   // モデルビュー変換行列の復帰
   glPopMatrix();
 
